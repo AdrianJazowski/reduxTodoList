@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { addTodo as addTodoAction } from "../actions";
+import { addTodo as addTodoAction } from "../../actions";
 import { connect } from "react-redux";
 
 const AddTodoForm = ({ addTodo }) => {
@@ -26,7 +26,7 @@ const AddTodoForm = ({ addTodo }) => {
     <div>
       <h2>Add todo:</h2>
       <form onSubmit={handleAddTodoForm}>
-        <input type="text" placeholder="type todo..." name="todoName" />
+        <textarea type="textarea" placeholder="type todo..." name="todoName" />
         <button type="submit">add</button>
       </form>
     </div>

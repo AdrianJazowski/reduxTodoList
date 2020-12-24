@@ -1,18 +1,23 @@
 /** @format */
 
 import React from "react";
-import AddTodoForm from "./components/AddTodoForm";
+import { TodoWrapper } from "./AppStyles";
+import AddTodoForm from "./components/addTodoForm/AddTodoForm";
 import ShowCounter from "./components/ShowCounter";
-import TodoList from "./components/TodoList";
+import TodoList from "./components/Todolist/TodoList";
+import GlobalStyle from "./GlobalStyles";
 
 const App = () => {
   return (
-    <div>
-      <h1>Redux App</h1>
-      <AddTodoForm />
-      <TodoList />
-      <ShowCounter />
-    </div>
+    <>
+      <GlobalStyle />
+      <TodoWrapper>
+        <h1>Redux App</h1>
+        <AddTodoForm />
+        <TodoList />
+        <ShowCounter />
+      </TodoWrapper>
+    </>
   );
 };
 

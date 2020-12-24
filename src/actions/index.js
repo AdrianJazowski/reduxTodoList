@@ -14,8 +14,15 @@ export const deleteTodo = (id) => {
     payload: id,
   };
 };
-
-//skrócona wersja
-// export const addTodo = () => ({
-
-// })
+export const completeTodo = (id) => {
+  return {
+    type: actionsTypes.COMPLETE_TODO,
+    payload: id,
+  };
+};
+export const editTodo = (id) => {
+  return {
+    type: actionsTypes.EDIT_TODO,
+    payload: id,
+  };
+};

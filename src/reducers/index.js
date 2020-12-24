@@ -36,6 +36,29 @@ const reducer = (state = initialState, action) => {
         ...state,
         todos: [...filteredTodos],
       };
+    case actionsTypes.COMPLETE_TODO:
+      const mapedTodos = state.todos.map((todo) => {
+        if (payload === todo.id) {
+          todo.done = !todo.done;
+        }
+        return todo;
+      });
+
+      return {
+        ...state,
+        todos: [...mapedTodos],
+      };
+    case actionsTypes.EDIT_TODO:
+      const mapedTodos2 = state.todos.map((todo) => {
+        if (payload === todo.id) {
+          todo.isEditing = !todo.isEditing;
+        }
+        return todo;
+      });
+      return {
+        ...state,
+        todos: [...mapedTodos2],
+      };
 
     default:
       return state;
