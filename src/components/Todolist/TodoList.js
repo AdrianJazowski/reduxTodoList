@@ -7,7 +7,6 @@ import {
   completeTodo as completeTodoAction,
   editTodo as editTodoAction,
 } from "../../actions";
-import CustomButton from "../atoms/Button";
 import {
   TodoH2,
   TodoListUl,
@@ -52,10 +51,10 @@ const TodoList = ({ todos, deleteTodo, completeTodo, editTodo }) => {
                   {done ? "isComplete" : "notComplete"}
                 </CustomButton> */}
 
-                <EditButton onClickFn={() => editTodo(id)}>
+                <EditButton onClick={() => editTodo(id)}>
                   {isEditing ? "stop Editing" : "start Editing"}{" "}
                 </EditButton>
-                <DeleteButton onClickFn={() => deleteTodo(id)}>
+                <DeleteButton onClick={() => deleteTodo(id)}>
                   delete
                 </DeleteButton>
               </ButtonsWrapper>

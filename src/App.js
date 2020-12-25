@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { TodoWrapper } from "./AppStyles";
+import { CustomH1, TodoWrapper } from "./AppStyles";
 import AddTodoForm from "./components/addTodoForm/AddTodoForm";
 import ShowCounter from "./components/ShowCounter";
 import TodoList from "./components/Todolist/TodoList";
@@ -12,7 +12,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <TodoWrapper>
-        <h1>Redux App</h1>
+        <CustomH1>Redux App</CustomH1>
         <AddTodoForm />
         <TodoList />
         <ShowCounter />

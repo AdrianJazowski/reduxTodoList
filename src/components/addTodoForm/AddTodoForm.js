@@ -3,6 +3,12 @@
 import React from "react";
 import { addTodo as addTodoAction } from "../../actions";
 import { connect } from "react-redux";
+import {
+  AddFormH2,
+  CustomForm,
+  TextArea,
+  PlusButton,
+} from "./AddTodoFormsStyles";
 
 const AddTodoForm = ({ addTodo }) => {
   const handleAddTodoForm = (e) => {
@@ -24,11 +30,13 @@ const AddTodoForm = ({ addTodo }) => {
 
   return (
     <div>
-      <h2>Add todo:</h2>
-      <form onSubmit={handleAddTodoForm}>
-        <textarea type="textarea" placeholder="type todo..." name="todoName" />
-        <button type="submit">add</button>
-      </form>
+      <AddFormH2>Add todo:</AddFormH2>
+      <CustomForm onSubmit={handleAddTodoForm}>
+        <TextArea type="textarea" placeholder="type todo..." name="todoName" />
+        <button type="submit">
+          <PlusButton />
+        </button>
+      </CustomForm>
     </div>
   );
 };
