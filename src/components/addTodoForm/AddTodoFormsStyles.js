@@ -24,3 +24,7 @@ export const PlusButton = styled(BsFillPlusSquareFill)`
   font-size: 50px;
   margin: 10px;
 `;
+export const ButtonWrapper = styled.button`
+  background: transparent;
+  border: none;
+`;

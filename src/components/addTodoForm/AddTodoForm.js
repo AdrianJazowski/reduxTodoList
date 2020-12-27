@@ -8,6 +8,7 @@ import {
   CustomForm,
   TextArea,
   PlusButton,
+  ButtonWrapper,
 } from "./AddTodoFormsStyles";
 
 const AddTodoForm = ({ addTodo }) => {
@@ -33,9 +34,9 @@ const AddTodoForm = ({ addTodo }) => {
       <AddFormH2>Add todo:</AddFormH2>
       <CustomForm onSubmit={handleAddTodoForm}>
         <TextArea type="textarea" placeholder="type todo..." name="todoName" />
-        <button type="submit">
+        <ButtonWrapper type="submit">
           <PlusButton />
-        </button>
+        </ButtonWrapper>
       </CustomForm>
     </div>
   );

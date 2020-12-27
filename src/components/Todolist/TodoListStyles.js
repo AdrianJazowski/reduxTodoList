@@ -20,11 +20,13 @@ export const ButtonsWrapper = styled.div`
 //   <AiFillDelete/>
 // ` }
 // `;
-export const SwitchedWrapperButton = styled.button`
+export const SwitchedWrapperDiv = styled.div`
   font-size: 25px;
   color: burlywood;
   margin: 10px;
   cursor: pointer;
+  background: transparent;
+  border: none;
 `;
 export const DeleteButton = styled(AiFillDelete)`
   font-size: 25px;

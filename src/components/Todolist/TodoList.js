@@ -18,7 +18,7 @@ import {
   EditButton,
   NotDoneYetButton,
   DoneButton,
-  SwitchedWrapperButton,
+  SwitchedWrapperDiv,
 } from "./TodoListStyles";
 
 const TodoList = ({ todos, deleteTodo, completeTodo, editTodo }) => {
@@ -30,27 +30,11 @@ const TodoList = ({ todos, deleteTodo, completeTodo, editTodo }) => {
           const { id, todoName, done, isEditing } = todo;
           return (
             <TodoListLi key={id}>
-              {/* {done ? (
-                <h4 className="done">{todoName}</h4>
-              ) : (
-                <h4>{todoName}</h4>
-              )} */}
-
-              {/* <h4 className={done ? "done" : ""}>{todoName}</h4> */}
-
-              {/* <h4 style={{ textDecoration: done ? "line-through" : "none" }}>
-                {todoName}
-              </h4> */}
-
               <TodoTitle isDone={done}>{todoName}</TodoTitle>
               <ButtonsWrapper>
-                <SwitchedWrapperButton onClick={() => completeTodo(id)}>
+                <SwitchedWrapperDiv onClick={() => completeTodo(id)}>
                   {done ? <NotDoneYetButton /> : <DoneButton />}
-                </SwitchedWrapperButton>
-                {/* <CustomButton onClickFn={() => completeTodo(id)}>
-                  {done ? "isComplete" : "notComplete"}
-                </CustomButton> */}
-
+                </SwitchedWrapperDiv>
                 <EditButton onClick={() => editTodo(id)}>
                   {isEditing ? "stop Editing" : "start Editing"}{" "}
                 </EditButton>
