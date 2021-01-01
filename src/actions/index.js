@@ -26,3 +26,9 @@ export const editTodo = (id) => {
     payload: id,
   };
 };
+export const saveEditedTodo = (id, name) => {
+  return {
+    type: actionsTypes.SAVE_TODO,
+    payload: { id, name },
+  };
+};

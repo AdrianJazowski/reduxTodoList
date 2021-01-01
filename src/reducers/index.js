@@ -59,6 +59,18 @@ const reducer = (state = initialState, action) => {
         ...state,
         todos: [...mapedTodos2],
       };
+    case actionsTypes.SAVE_TODO:
+      const savedTodo = state.todos.map((todo) => {
+        if (payload.id === todo.id) {
+          todo.todoName = payload.name;
+          todo.isEditing = false;
+        }
+        return todo;
+      });
+      return {
+        ...state,
+        todos: [...savedTodo],
+      };
 
     default:
       return state;

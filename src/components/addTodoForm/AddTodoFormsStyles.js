@@ -23,8 +23,10 @@ export const AddFormH2 = styled.h2`
 export const PlusButton = styled(BsFillPlusSquareFill)`
   font-size: 50px;
   margin: 10px;
+  color: burlywood;
 `;
 export const ButtonWrapper = styled.button`
   background: transparent;
   border: none;
+  outline: none;
 `;

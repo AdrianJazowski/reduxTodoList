@@ -18,5 +18,5 @@ export const TodoWrapper = styled.div`
   margin: 60px auto;
   border-radius: 10px;
   padding-bottom: 32px;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
